@@ -1,0 +1,93 @@
+@use '../base/mixins.scss' as m;
+
+nav {
+  background-color: #323232;
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  padding-block: 1rem;
+
+  @include m.desktop {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+.nav__logo {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+
+  @include m.desktop {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.nav__logo p {
+  background: linear-gradient(118.18deg, #12c2e9 -7.97%, #c471ed 47.14%, #f64f59 100%);
+  color: transparent;
+  font-size: 2rem;
+  font-weight: 900;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.form__content {
+  display: flex;
+}
+
+.form__group input {
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  outline: none;
+  padding: 0.8rem 1.2rem;
+  width: 25rem;
+}
+
+.form__group input::placeholder {
+  color: #a6a6a6;
+}
+
+.form__submit {
+  align-items: center;
+  background: linear-gradient(132.6deg, #8a2387 0%, #e94057 50.52%, #f27121 100%);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding-inline: 2rem;
+  transition: all 0.3s ease-in-out;
+  width: 2rem;
+}
+
+.form__submit:hover {
+  background: linear-gradient(132.6deg, #b42db0 0%, #e65568 50.52%, #fd9555 100%);
+}
+
+.form__submit i {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.nav__select {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  outline: none;
+  width: 8rem;
+}
+
+.nav__select option {
+  color: #000;
+}
